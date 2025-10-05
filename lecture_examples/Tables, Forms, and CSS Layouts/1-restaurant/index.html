@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Reservation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Restaurant Reservation</h1>
+    </header>
+    <main>
+        <!-- Schedule Table-->
+         <section id="schedule">
+            <h2>Weekly Schedule</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Hours</th>
+                        <th>Capacity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>12 PM - 10 PM</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td colspan="2">Closed</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>12 PM - 10 PM</td>
+                        <td>50</td>
+                    </tr>
+                    <!--Add more rows as needed-->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Reservation Form -->
+        <section id="reservatrion">
+            <h2>Make a Reservation</h2>
+            <form action="\submit-reservation" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="name" required>
+
+                <label for="guests">Number of Guests:</label>
+                <select id="guests" name="guests">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+
+                <button type="submit">Submit Reservation</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Restaurant Reservations</p>
+    </footer>
+</body>
+</html>
