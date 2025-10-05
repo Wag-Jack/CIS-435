@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Interactive Quiz</h1>
+    </header>
+    <main>
+        <!--Progress Bar-->
+        <section id="progress-container">
+            <div id="progress-bar"></div>
+        </section>
+
+        <!-- Quiz Form-->
+        <form id="Quiz-form" action="/submit-quiz" method="post">
+            <div class="question">
+                <p>1. What is the capital of France?</p>
+                <label>
+                    <input type="radio" name="q1" value="Paris" required> Paris
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="Rome" required> Rome
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="Berlin" required> Berlin
+                </label>
+            </div>
+            <div class="question">
+                <p>2. Which planet is known as the red planet?</p>
+                <label>
+                    <input type="radio" name="q2" value="Mars" required> Mars
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="Venus" required> Venus
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="Jupiter" required> Jupiter
+                </label>
+            </div>
+            <!-- Add more questions as needed -->
+            <button type="submit">Subimt Quiz</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 Interactive Quiz App</p>
+    </footer>
+
+    <script>
+        // Script to update the progress bar
+        const form = document.getElementById("quiz-form");
+        const progressBar = document.getElementById('progress-bar');
+        const totalQuestions = form.querySelectorAll('.question').length;
+
+        form.addEventListener('change', () => {
+            const answeredQuestions = form.querySelectorAll('input:checked').length;
+            const progress = (answeredQuestions / totalQuestions) * 100;
+            progressBar.style.width = `${progress}%`;
+        });
+    </script>
+</body>
+</html>
