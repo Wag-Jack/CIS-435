@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+.question {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.options li {
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.options li.correct {
+    background-color: lightgreen;
+}
+
+.options li.wrong {
+    background-color: lightcoral;
+}
+
+#timer {
+    font-weight: bold;
+}
