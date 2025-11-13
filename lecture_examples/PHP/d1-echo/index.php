@@ -18,5 +18,14 @@
             echo "</strong>";
         ?>
     </p>
+    <p>
+        <?php
+            $count = 0;
+            while ($count < 10) {
+                echo $count."<br>";
+                $count++;
+            }
+        ?>
+    </p>
 </body>
 </html>
